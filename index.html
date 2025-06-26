@@ -118,14 +118,18 @@
 
         <div class="row">
      
-          <div class="col-md-9 my-cal-col">
+          <div class="col-md-6 my-cal-col">
             <label class="my-cal-label"> Select Zip Code & Place  </label>
               <select id="zipcode-select" placeholder="Search for a zip code or place name"></select>
 
           </div>
+            <div class="col-md-3 my-cal-col">
+            <label class="my-cal-label"> Kanton </label>
+            <input type="text" id="kanton-inpt" class="form-control my-cal-input mt-1">
+          </div>
           <div class="col-md-3 my-cal-col">
             <label class="my-cal-label"> Region </label>
-            <input type="number" name="zip-code" class="form-control my-cal-input mt-1">
+            <input type="number" id="region-inpt" class="form-control my-cal-input mt-1">
           </div>
      
         </div>
@@ -222,6 +226,8 @@ if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) {
 
         console.log("Selected Kanton:", selectedKanton);
         console.log("Selected Region:", selectedRegion);
+        $("#kanton-inpt").val(selectedKanton);
+        $("#region-inpt").val(selectedRegion);
       }
     }
      });
